@@ -23,111 +23,94 @@ import Layout from "../layouts/Layout.astro";
       <h4 class="txtSubtitule z-10">destacados</h4>
     </div>
 
-    <div class="-mt-5">
-      <div class="BackgroundProducts mx-auto">
-        <div class="grid-container">
-          <div class="grid">
-            <div class="slide">
-              <div class="-ml-4">
-                <Card
-                  name="Holder de celular para escritorio"
-                  img="../../public/imgs/PV_DESK1.png"
-                />
-              </div>
+    <section class="relative -mt-5">
+      <div class="BackgroundProducts absolute mx-auto">
+        <div class="absolute">
+          <div class="grid grid-cols-2 gap-5">
+            <div>
+              <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK1.png"
+            />
             </div>
-            <div class="slide">
-              <div class="-ml-4">
-                <Card
-                  name="Holder de celular para carro"
-                  img="../../public/imgs/PV_DESK1.png"
-                />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="-ml-4">
-                <Card
-                  name="Holder de celular para carro"
-                  img="../../public/imgs/PV_DESK1.png"
-                />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="-ml-4">
-                <Card
-                  name="Holder de celular para carro"
-                  img="../../public/imgs/PV_DESK1.png"
-                />
-              </div>
-            </div>
+            <div>
+              <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK1.png"
+            />
+            </div>                                
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- <div class="titleLinks lema text-white items-center text-center">
-      Links que te seran útiles
-    </div> -->
+      </div>
+    </section>
+
+    <style>
+      main {
+        margin: auto;
+      }
+      .lema {
+        font-family: "Poppins", sans-serif;
+        font-style: bold;
+        font-weight: 700;
+        line-height: 19.646px;
+        letter-spacing: 0.428px;
+        text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.428px;
+      }
+      .BackgroundProducts {
+        width: 80%;
+        height: 260px;
+        /* flex-shrink: 0; */
+        border-radius: 20px;
+        background: rgba(217, 217, 217, 0.2);
+        backdrop-filter: blur(17.399999618530273px);
+      }
+      .titleLinks {
+        margin-top: 15px;
+      }
+      .txtSubtitule {
+        color: #222;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: "Poppins", sans-serif;
+        font-size: 19.192px;
+        font-style: bold;
+        font-weight: 800;
+        line-height: 20.417px; /* 106.384% */
+        letter-spacing: 0.384px;
+      }
+      .BackgroundProducts {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: nowrap;
+        animation: slide 10s linear infinite;
+      }
+
+      .slide {
+        flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
+        padding: 0 10px;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .contenido {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-  }
-  .lema {
-    font-family: "Poppins", sans-serif;
-    font-style: bold;
-    font-weight: 700;
-    line-height: 19.646px;
-    letter-spacing: 0.428px;
-    text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
-    letter-spacing: 0.428px;
-  }
-  .BackgroundProducts {
-    width: 80%;
-    height: 260px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(217, 217, 217, 0.2);
-    backdrop-filter: blur(17.399999618530273px);
-  }
-  .titleLinks {
-    margin-top: 15px;
-  }
-  .txtSubtitule {
-    color: #222;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Poppins", sans-serif;
-    font-size: 19.192px;
-    font-style: bold;
-    font-weight: 800;
-    line-height: 20.417px; /* 106.384% */
-    letter-spacing: 0.384px;
-  }
-  .BackgroundProducts {
-    overflow: hidden;
-  }
-
-  .grid {
-    display: flex;
-    flex-wrap: nowrap;
-    animation: slide 10s linear infinite;
-  }
-
-  .slide {
-    flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
-    padding: 0 10px;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-</style>
