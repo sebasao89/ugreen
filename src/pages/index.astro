@@ -1,32 +1,51 @@
 ---
-import Product from "../components/Product.astro";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-	<div class="flex justify-center items-center mt-10">
-		<img src="../../public/imgs/Logo.png" alt="logo"> 
-	</div>
-	<div class="flex flex-col items-center text-center text-2xl -mt-10">
-		<h3 class="lema ">Tenemos los <span class="text-white">mejores</span></h3>
-		<span class="lema text-white">accesorios</span>
-		<h3 class="lema">tecnológicos</h3>
-	</div>
-	<div class="flex flex-col items-center text-center text-lg mt-16">
-		<h4 class="lema">Mira nuestros productos</h4>
-		<h4 class="lema z-10">destacados</h4>
-	</div>
-	<div class="products relative mx-auto -mt-5">
-	</div>
-	<div class="titleLinks lema text-white items-center text-center">
-		Links que te seran útiles
-	</div>
-	<div>
+    <div class="flex justify-center items-center mt-10">
+      <img
+        src="../../public/imgs/Logo.png"
+        alt="logo"
+        height="317px"
+        width="242px"
+      />
+    </div>
+    <div class="flex flex-col items-center text-center text-2xl -mt-10">
+      <h3 class="lema">Tenemos los <span class="text-white">mejores</span></h3>
+      <span class="lema text-white">accesorios</span>
+      <h3 class="lema">tecnológicos</h3>
+    </div>
+    <div class="flex flex-col items-center text-center text-lg mt-16">
+      <h4 class="txtSubtitule">Mira nuestros productos</h4>
+      <h4 class="txtSubtitule z-10">destacados</h4>
+    </div>
 
-		<Product></Product>
-	</div>
-	
+    <div class="-mt-5">
+      <div class="BackgroundProducts mx-auto">
+		  <div class="grid grid-cols-2 gap-10">
+			<div class="-ml-4">
+				<Card
+				  name="Holder de celular para escritorio"
+				  img="../../public/imgs/PV_DESK1.png"
+				/>
+			</div>
+			<div class="-ml-4">
+				<Card
+				name="Holder de celular para &nbsp carro"
+				img="../../public/imgs/PV_DESK1.png"
+				/>
+			</div>
+	  </div>
+
+      </div>
+    </div>
+
+    <!-- <div class="titleLinks lema text-white items-center text-center">
+      Links que te seran útiles
+    </div> -->
   </main>
 </Layout>
 
@@ -35,26 +54,34 @@ import Layout from "../layouts/Layout.astro";
     margin: auto;
   }
   .lema {
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 19.646px;
-	letter-spacing: 0.428px;
-	text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
-	letter-spacing: 0.428px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.646px;
+    letter-spacing: 0.428px;
+    text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.428px;
   }
-  .products {
-	width: 90%;
-	height: 275.76px;
-	flex-shrink: 0;
-	border-radius: 20px;
-	background: rgba(217, 217, 217, 0.20);
-	backdrop-filter: blur(17.399999618530273px);
-	/* z-index: 2; */
+  .BackgroundProducts {
+    width: 80%;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    backdrop-filter: blur(17.399999618530273px);
   }
   .titleLinks {
-	margin-top: 15px;
+    margin-top: 15px;
   }
-
-
+  .txtSubtitule {
+    color: #222;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Poppins;
+    font-size: 19.192px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20.417px; /* 106.384% */
+    letter-spacing: 0.384px;
+  }
 </style>
