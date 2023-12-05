@@ -1,4 +1,5 @@
 ---
+import Product from "../components/Product.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -10,40 +11,22 @@ import Layout from "../layouts/Layout.astro";
 	<div class="flex flex-col items-center text-center text-2xl -mt-10">
 		<h3 class="lema ">Tenemos los <span class="text-white">mejores</span></h3>
 		<span class="lema text-white">accesorios</span>
-		<h3 class="lema ">tecnológicos</h3>
+		<h3 class="lema">tecnológicos</h3>
 	</div>
-	<div class="flex flex-col items-center text-center text-lg mt-20 z-0">
+	<div class="flex flex-col items-center text-center text-lg mt-16">
 		<h4 class="lema">Mira nuestros productos</h4>
-		<h4 class="lema">destacados</h4>
+		<h4 class="lema z-10">destacados</h4>
 	</div>
-	<div class="products mx-auto -mt-5">
+	<div class="products relative mx-auto -mt-5">
+	</div>
+	<div class="titleLinks lema text-white items-center text-center">
+		Links que te seran útiles
+	</div>
+	<div>
 
+		<Product></Product>
 	</div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="auto"
-      viewBox="0 0 480 957"
-      preserveAspectRatio="xMidYMid meet"
-      fill="none"
-    >
-      <path
-        d="M6.42902 0.428955H-0.506348V902.164C-0.506348 931.946 23.6368 956.089 53.4188 956.089H426.581C456.363 956.089 480.506 931.946 480.506 902.164L480.506 0.428955H472.325C455.536 0.428955 439.362 6.74436 427.015 18.1205L376.147 64.99C359.817 80.0359 338.425 88.3885 316.221 88.3885H162.533C140.329 88.3885 118.937 80.0359 102.607 64.99L51.7388 18.1205C39.3921 6.74436 23.2177 0.428955 6.42902 0.428955Z"
-        fill="url(#paint0_linear_1_116)"></path>
-      <defs>
-        <linearGradient
-          id="paint0_linear_1_116"
-          x1="240"
-          y1="0.428955"
-          x2="240"
-          y2="1323.51"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-color="#6AC378"></stop>
-          <stop offset="1" stop-color="#6AC378" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
+	
   </main>
 </Layout>
 
@@ -67,6 +50,11 @@ import Layout from "../layouts/Layout.astro";
 	border-radius: 20px;
 	background: rgba(217, 217, 217, 0.20);
 	backdrop-filter: blur(17.399999618530273px);
+	/* z-index: 2; */
   }
+  .titleLinks {
+	margin-top: 15px;
+  }
+
 
 </style>
