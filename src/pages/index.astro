@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
         width="242px"
       />
     </div>
-    <div class="flex flex-col items-center text-center text-2xl -mt-10">
+    <div class="flex flex-col items-center text-center text-xl -mt-10">
       <h3 class="lema">Tenemos los <span class="text-white">mejores</span></h3>
       <span class="lema text-white">accesorios</span>
       <h3 class="lema">tecnológicos</h3>
@@ -25,21 +25,42 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="-mt-5">
       <div class="BackgroundProducts mx-auto">
-		  <div class="grid grid-cols-2 gap-10">
-			<div class="-ml-4">
-				<Card
-				  name="Holder de celular para escritorio"
-				  img="../../public/imgs/PV_DESK1.png"
-				/>
-			</div>
-			<div class="-ml-4">
-				<Card
-				name="Holder de celular para &nbsp carro"
-				img="../../public/imgs/PV_DESK1.png"
-				/>
-			</div>
-	  </div>
-
+        <div class="grid-container">
+          <div class="grid">
+            <div class="slide">
+              <div class="-ml-4">
+                <Card
+                  name="Holder de celular para escritorio"
+                  img="../../public/imgs/PV_DESK1.png"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="-ml-4">
+                <Card
+                  name="Holder de celular para carro"
+                  img="../../public/imgs/PV_DESK1.png"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="-ml-4">
+                <Card
+                  name="Holder de celular para carro"
+                  img="../../public/imgs/PV_DESK1.png"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="-ml-4">
+                <Card
+                  name="Holder de celular para carro"
+                  img="../../public/imgs/PV_DESK1.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -54,8 +75,8 @@ import Layout from "../layouts/Layout.astro";
     margin: auto;
   }
   .lema {
-    font-family: Poppins;
-    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
     font-weight: 700;
     line-height: 19.646px;
     letter-spacing: 0.428px;
@@ -77,11 +98,36 @@ import Layout from "../layouts/Layout.astro";
     color: #222;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 19.192px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 800;
     line-height: 20.417px; /* 106.384% */
     letter-spacing: 0.384px;
+  }
+  .BackgroundProducts {
+    overflow: hidden;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 10s linear infinite;
+  }
+
+  .slide {
+    flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
+    padding: 0 10px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 </style>
