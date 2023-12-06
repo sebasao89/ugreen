@@ -1,11 +1,11 @@
 ---
 import Card from "../components/Card.astro";
-import Product from "../components/Product.astro";
 import Sociali from "../components/Sociali.astro";
 import Socialt from "../components/Socialt.astro";
 import Socialu from "../components/Socialu.astro";
 import Socialw from "../components/Socialw.astro";
 import Layout from "../layouts/Layout.astro";
+import Background2 from "../components/Background2.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -24,14 +24,25 @@ import Layout from "../layouts/Layout.astro";
       <h3 class="lema">tecnológicos</h3>
     </div>
 
-    <section class="relative mt-14">
+    <section class="relative mt-12">
       <!-- CABECERA -->
       <div class="relative flex flex-col items-center text-center text-sm">
-        <h4 class="txtSubtitule">Mira nuestros productos</h4>
+        <h4 class="txtSubtitule z-10">Mira nuestros productos</h4>
         <h4 class="txtSubtitule z-10">destacados</h4>
       </div>
       <!-- BACKGROUND -->
-      <div class="BackgroundProducts mx-auto -mt-5"></div>
+      <div class="BackgroundProducts relative mx-auto mt-10">
+        <!-- BUTTONS -->
+        <div class="btnsSlide flex top-52 justify-between -mx-2">
+          <button>
+            <img src="../../public/imgs/btnLeft.png" alt="Button left" />
+          </button>
+          <button>
+            <img
+              src="../../public/imgs/btnRight.png" alt="Button Right" />
+          </button>
+        </div>
+      </div>
       <!-- PRODUCTS -->
       <div class="absolute top-5 efect grid grid-cols-2 gap-5">
         <Card
@@ -43,38 +54,49 @@ import Layout from "../layouts/Layout.astro";
           img="../../public/imgs/PV_DESK1.png"
         />
       </div>
-      <!-- BUTTONS -->
-      <div class="btnsSlide flex justify-between px-8">
-        <button>
-          <img src="../../public/imgs/btnLeft.png" alt="Button left">
-        </button>
-        <button>
-          <img src="../../public/imgs/btnRight.png" alt="Button Right" alt="">
-        </button>
-      </div>
     </section>
 
     <section class="relative mt-5">
       <!-- BACKGROUND -->
       <div class="relative">
-        <Product></Product>
+        <Background2 />
+        <!-- TEXTO CABECERA -->
+        <div class="absolute top-0 left-0 right-0 text-center mt-10">
+          <h3 class="text-white text-sm">Links que te seran utiles</h3>
+          <p class="mx-auto w-max mt-4"><img src="../../public/imgs/bajar.png" alt="Bajar"></p>
+        </div>
       </div>
       <!-- REDES SOCIALES -->
       <div class="absolute top-40 grid grid-cols-1 gap-2">
         <div>
-          <Socialw logo="../../public/imgs/WhatsApp.png" title="ESCRIBENOS POR WHATSAPP" subtitle="Te brindamos asesoria personalizada"></Socialw>
+          <Socialw
+            logo="../../public/imgs/WhatsApp.png"
+            title="ESCRIBENOS POR WHATSAPP"
+            subtitle="Te brindamos asesoria personalizada"
+          />
         </div>
         <div>
-          <Socialt logo="../../public/imgs/tiktok.png" title="SÍGUENOS EN TIKTOK" subtitle="Te brindamos asesoria personalizada"></Socialt>
+          <Socialt
+            logo="../../public/imgs/tiktok.png"
+            title="SÍGUENOS EN TIKTOK"
+            subtitle="Te brindamos asesoria personalizada"
+          />
         </div>
         <div>
-          <Sociali logo="../../public/imgs/instagram.png" title="SÍGUENOS EN INSTAGRAM" subtitle="Te brindamos asesoria personalizada"></Sociali>
+          <Sociali
+            logo="../../public/imgs/instagram.png"
+            title="SÍGUENOS EN INSTAGRAM"
+            subtitle="Te brindamos asesoria personalizada"
+          />
         </div>
         <div>
-          <Socialu logo="../../public/imgs/ubicacion.png" title="DONDE ESTAMOS UBICADOS" subtitle="Te brindamos asesoria personalizada"></Socialu>
+          <Socialu
+            logo="../../public/imgs/ubicacion.png"
+            title="DONDE ESTAMOS UBICADOS"
+            subtitle="Te brindamos asesoria personalizada"
+          />
         </div>
       </div>
-
     </section>
 
     <style>
