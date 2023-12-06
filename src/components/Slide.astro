@@ -1,0 +1,67 @@
+---
+interface Props {
+  name: string;
+  img?: string;
+}
+
+const { name, img } = Astro.props;
+
+// let currentIndex: number = 0;
+// const slides: NodeListOf<HTMLElement> = document.querySelectorAll('.slide');
+// const slideTrack: HTMLElement | null = document.querySelector('.slide-track');
+
+// function moveSlide(direction: string): void {
+//   if (slideTrack) {
+//     const slideWidth: number = slides[0].offsetWidth;
+
+//     if (direction === 'left' && currentIndex > 0) {
+//       currentIndex--;
+//     } else if (direction === 'right' && currentIndex < slides.length - 1) {
+//       currentIndex++;
+//     }
+
+//     if (slideTrack.style) {
+//       slideTrack.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+//     }
+//   }
+// }
+
+---
+
+<div class="slide-container">
+  <div class="slide-track">
+    <div class="slide">
+      <!-- Contenido de tu componente Slide aquí -->
+      <!-- Por ejemplo: -->
+      <img src={img} alt="Slide 1" />
+      <h3>Nombre del Slide 1</h3>
+    </div>
+  </div>
+</div>
+
+<button onclick="moveSlide('left');">Izquierda</button>
+<button onclick="moveSlide('right');">Derecha</button>
+
+<style>
+  .slide-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide-track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* Ajusta el estilo de los slides según tus necesidades */
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+</style>

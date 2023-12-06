@@ -7,6 +7,10 @@ import Socialw from "../components/Socialw.astro";
 import Layout from "../layouts/Layout.astro";
 import Background2 from "../components/Background2.astro";
 import Footer from "../components/Footer.astro";
+import Slide from "../components/Slide.astro";
+
+// crear el metodo onclick="plusSlides()" para que mueva el componente Card a la izquierda o derecha
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -35,26 +39,66 @@ import Footer from "../components/Footer.astro";
       <div class="BackgroundProducts relative mx-auto mt-10">
         <!-- BUTTONS -->
         <div class="btnsSlide flex top-52 justify-between -mx-2">
-          <button>
+          <button onclick="plusSlides()">
             <img src="../../public/imgs/btnLeft.png" alt="Button left" />
           </button>
           <button>
-            <img
-              src="../../public/imgs/btnRight.png" alt="Button Right" />
+            <img src="../../public/imgs/btnRight.png" alt="Button Right" />
           </button>
         </div>
       </div>
       <!-- PRODUCTS -->
-      <div class="absolute top-5 efect grid grid-cols-2 gap-5">
-        <Card
-          name="Holder de celular para escritorio"
-          img="../../public/imgs/PV_DESK1.png"
-        />
-        <Card
-          name="Holder de celular para escritorio"
-          img="../../public/imgs/PV_DESK2.png"
-        />
+      <div class="overflow-x-auto absolute top-5 w-full">
+        <div class="flex flex-nowrap gap-5">
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK3.png"
+            />
+          </div>
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK4.png"
+            />
+          </div>
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK1.png"
+            />
+          </div>
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK2.png"
+            />
+          </div>
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK5.png"
+            />
+          </div>
+          <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK6.png"
+            />
+          </div>
+          <!-- <div class="flex-none">
+            <Card
+              name="Holder de celular para escritorio"
+              img="../../public/imgs/PV_DESK3.png"
+            />
+          </div> -->
+          <!-- Agrega más tarjetas según sea necesario -->
+        </div>
       </div>
+      
+
+
+      
     </section>
 
     <section class="relative mt-5">
@@ -64,7 +108,9 @@ import Footer from "../components/Footer.astro";
         <!-- TEXTO CABECERA -->
         <div class="absolute top-0 left-0 right-0 text-center mt-10">
           <h3 class="text-white text-sm">Links que te seran utiles</h3>
-          <p class="mx-auto w-max mt-4"><img src="../../public/imgs/bajar.png" alt="Bajar"></p>
+          <p class="mx-auto w-max mt-4">
+            <img src="../../public/imgs/bajar.png" alt="Bajar" />
+          </p>
         </div>
       </div>
       <!-- REDES SOCIALES -->
@@ -102,9 +148,15 @@ import Footer from "../components/Footer.astro";
           <Footer />
         </div>
       </div>
-
     </section>
 
+    <footer>
+      <img
+        src="../../public/imgs/logo2.png"
+        alt="Logo final"
+        class="mx-auto my-10"
+      />
+    </footer>
 
     <style>
       main {
@@ -142,17 +194,6 @@ import Footer from "../components/Footer.astro";
         line-height: 20.417px; /* 106.384% */
         letter-spacing: 0.384px;
       }
-      .efect {
-        display: flex;
-        flex-wrap: nowrap;
-        animation: slide 10s linear infinite;
-      }
-      .slide {
-        flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
-        padding: 0 10px;
-        min-width: 0;
-        box-sizing: border-box;
-      }
       .contenido {
         position: absolute;
         top: 0;
@@ -161,15 +202,6 @@ import Footer from "../components/Footer.astro";
       .btnsSlide {
         position: relative;
         margin-top: -60px;
-      }
-
-      @keyframes slide {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
       }
     </style>
   </main>

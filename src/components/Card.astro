@@ -5,9 +5,12 @@ interface Props {
 }
 
 const { name, img } = Astro.props;
+
+
+
 ---
 
-<div class="mx-auto items-center text-center">
+<div class="mx-auto items-center text-center efect slide">
   <a href="#">
     <img alt="Art" src={img} class="w-full object-cover p-5" />
 
@@ -34,4 +37,24 @@ const { name, img } = Astro.props;
     border-radius: 15.343px;
     background: rgba(0, 0, 0, 0.4);
   }
+  .efect {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 10s linear infinite;
+  }
+  .slide {
+    flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
+    padding: 0 10px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
 </style>
