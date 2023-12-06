@@ -1,6 +1,10 @@
 ---
 import Card from "../components/Card.astro";
 import Product from "../components/Product.astro";
+import Sociali from "../components/Sociali.astro";
+import Socialt from "../components/Socialt.astro";
+import Socialu from "../components/Socialu.astro";
+import Socialw from "../components/Socialw.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -50,8 +54,18 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="mt-5">
-      <Product></Product>
+    <section class="relative mt-5">
+      <!-- BACKGROUND -->
+      <div class="relative">
+        <Product></Product>
+      </div>
+      <!-- REDES SOCIALES -->
+      <div class="absolute top-40">
+        <Socialw logo="../../public/imgs/WhatsApp.png" title="ESCRIBENOS POR WHATSAPP" subtitle="Te brindamos asesoria personalizada"></Socialw>
+        <Socialt logo="../../public/imgs/tiktok.png" title="SÍGUENOS EN TIKTOK" subtitle="Te brindamos asesoria personalizada"></Socialt>
+        <Sociali logo="../../public/imgs/instagram.png" title="SÍGUENOS EN INSTAGRAM" subtitle="Te brindamos asesoria personalizada"></Sociali>
+        <Socialu logo="../../public/imgs/ubicacion.png" title="DONDE ESTAMOS UBICADOS" subtitle="Te brindamos asesoria personalizada"></Socialu>
+      </div>
 
     </section>
 

@@ -1,0 +1,42 @@
+---
+interface Props {
+  logo: string;
+  title: string;
+  subtitle: string;
+}
+
+const { logo, title, subtitle } = Astro.props;
+---
+
+<div class="container">
+  <img src={logo} alt="" />
+  <div class="texto">
+    <h3>{title}</h3>
+    <p>{subtitle}</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    padding: 21.694px 16.672px 21.28px 22.043px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 9.013px;
+    border-radius: 16.956px;
+    border: 1.696px solid #baffc0;
+    background: linear-gradient(
+      92deg,
+      #65cd70 4.58%,
+      rgba(111, 212, 121, 0) 98.44%,
+      rgba(111, 212, 121, 0.2) 98.44%
+    );
+    box-shadow:
+      0px 2.346px 1.877px 0px rgba(66, 175, 84, 0.1),
+      0px 5.638px 4.51px 0px rgba(66, 175, 84, 0.14),
+      0px 10.616px 8.493px 0px rgba(66, 175, 84, 0.17),
+      0px 18.937px 15.15px 0px rgba(66, 175, 84, 0.2),
+      0px 35.42px 28.336px 0px rgba(66, 175, 84, 0.24),
+      0px 84.782px 67.825px 0px rgba(66, 175, 84, 0.34);
+  }
+</style>
