@@ -33,7 +33,7 @@ import Layout from "../layouts/Layout.astro";
       <!-- BACKGROUND -->
       <div class="BackgroundProducts mx-auto -mt-5"></div>
       <!-- PRODUCTS -->
-      <div class="absolute top-5 grid grid-cols-2 gap-5">
+      <div class="absolute top-5 efect grid grid-cols-2 gap-5">
         <Card
           name="Holder de celular para escritorio"
           img="../../public/imgs/PV_DESK1.png"
@@ -60,11 +60,19 @@ import Layout from "../layouts/Layout.astro";
         <Product></Product>
       </div>
       <!-- REDES SOCIALES -->
-      <div class="absolute top-40">
-        <Socialw logo="../../public/imgs/WhatsApp.png" title="ESCRIBENOS POR WHATSAPP" subtitle="Te brindamos asesoria personalizada"></Socialw>
-        <Socialt logo="../../public/imgs/tiktok.png" title="SÍGUENOS EN TIKTOK" subtitle="Te brindamos asesoria personalizada"></Socialt>
-        <Sociali logo="../../public/imgs/instagram.png" title="SÍGUENOS EN INSTAGRAM" subtitle="Te brindamos asesoria personalizada"></Sociali>
-        <Socialu logo="../../public/imgs/ubicacion.png" title="DONDE ESTAMOS UBICADOS" subtitle="Te brindamos asesoria personalizada"></Socialu>
+      <div class="absolute top-40 grid grid-cols-1 gap-2">
+        <div>
+          <Socialw logo="../../public/imgs/WhatsApp.png" title="ESCRIBENOS POR WHATSAPP" subtitle="Te brindamos asesoria personalizada"></Socialw>
+        </div>
+        <div>
+          <Socialt logo="../../public/imgs/tiktok.png" title="SÍGUENOS EN TIKTOK" subtitle="Te brindamos asesoria personalizada"></Socialt>
+        </div>
+        <div>
+          <Sociali logo="../../public/imgs/instagram.png" title="SÍGUENOS EN INSTAGRAM" subtitle="Te brindamos asesoria personalizada"></Sociali>
+        </div>
+        <div>
+          <Socialu logo="../../public/imgs/ubicacion.png" title="DONDE ESTAMOS UBICADOS" subtitle="Te brindamos asesoria personalizada"></Socialu>
+        </div>
       </div>
 
     </section>
@@ -105,13 +113,11 @@ import Layout from "../layouts/Layout.astro";
         line-height: 20.417px; /* 106.384% */
         letter-spacing: 0.384px;
       }
-
-      .grid {
+      .efect {
         display: flex;
         flex-wrap: nowrap;
         animation: slide 10s linear infinite;
       }
-
       .slide {
         flex: 0 0 80%; /* Cambiar el número de tarjetas que quieres mostrar (por ejemplo, 25% para mostrar 4 tarjetas) */
         padding: 0 10px;
@@ -123,7 +129,6 @@ import Layout from "../layouts/Layout.astro";
         top: 0;
         left: 0;
       }
-
       .btnsSlide {
         position: relative;
         margin-top: -60px;
