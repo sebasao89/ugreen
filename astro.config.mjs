@@ -4,8 +4,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sebasao89.github.io',
-  // base: '/dist',
   publicPath: "/public",
+  site: 'https://sebasao89.github.io',
+  base: '/ugreen',
   integrations: [tailwind()]
 });
