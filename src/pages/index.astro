@@ -14,7 +14,7 @@ import Footer from "../components/Footer.astro";
   <main>
     <div class="flex justify-center items-center mt-10">
       <img
-        src="../../public/imgs/Logo.png"
+        src="/images/Logo.png"
         alt="logo"
         height="270px"
         width="195px"
@@ -37,10 +37,10 @@ import Footer from "../components/Footer.astro";
         <!-- BUTTONS -->
         <div class="btnsSlide flex top-52 justify-between -mx-2">
           <button onclick="plusSlides()">
-            <img src="../../public/imgs/btnLeft.png" alt="Button left" />
+            <img src="/images/btnLeft.png" alt="Button left" />
           </button>
           <button>
-            <img src="../../public/imgs/btnRight.png" alt="Button Right" />
+            <img src="/images/btnRight.png" alt="Button Right" />
           </button>
         </div>
       </div>
@@ -50,52 +50,48 @@ import Footer from "../components/Footer.astro";
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK3.png"
+              img="/images/PV_DESK3.png"
             />
           </div>
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK4.png"
+              img="/images/PV_DESK4.png"
             />
           </div>
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK1.png"
+              img="/images/PV_DESK1.png"
             />
           </div>
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK2.png"
+              img="/images/PV_DESK2.png"
             />
           </div>
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK5.png"
+              img="/images/PV_DESK5.png"
             />
           </div>
           <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK6.png"
+              img="/images/PV_DESK6.png"
             />
           </div>
           <!-- <div class="flex-none">
             <Card
               name="Holder de celular para escritorio"
-              img="../../public/imgs/PV_DESK3.png"
+              img="/PV_DESK3.png"
             />
           </div> -->
           <!-- Agrega más tarjetas según sea necesario -->
         </div>
       </div>
-      
-
-
-      
     </section>
 
     <section class="relative mt-5">
@@ -106,7 +102,7 @@ import Footer from "../components/Footer.astro";
         <div class="absolute top-0 left-0 right-0 text-center mt-10">
           <h3 class="text-white text-sm">Links que te seran utiles</h3>
           <p class="mx-auto w-max mt-4">
-            <img src="../../public/imgs/bajar.png" alt="Bajar" />
+            <img src="/images/bajar.png" alt="Bajar" />
           </p>
         </div>
       </div>
@@ -114,28 +110,28 @@ import Footer from "../components/Footer.astro";
       <div class="absolute top-32 mx-auto flex flex-col gap-8">
         <div class="mx-9">
           <Socialw
-            logo="../../public/imgs/WhatsApp.png"
+            logo="/images/WhatsApp.png"
             title="ESCRIBENOS POR WHATSAPP"
             subtitle="Te brindamos asesoria personalizada"
           />
         </div>
         <div class="mx-9">
           <Socialt
-            logo="../../public/imgs/tiktok.png"
+            logo="/images/tiktok.png"
             title="SÍGUENOS EN TIKTOK"
             subtitle="Tenemos los mejores consejos!"
           />
         </div>
         <div class="mx-9">
           <Sociali
-            logo="../../public/imgs/instagram.png"
+            logo="/images/instagram.png"
             title="SÍGUENOS EN INSTAGRAM"
             subtitle="Conoce nuestros productos"
           />
         </div>
         <div class="mx-9">
           <Socialu
-            logo="../../public/imgs/ubicacion.png"
+            logo="/images/ubicacion.png"
             title="DONDE ESTAMOS UBICADOS"
             subtitle="No hay problema, te llevamos al mapa"
           />
@@ -149,57 +145,60 @@ import Footer from "../components/Footer.astro";
 
     <footer>
       <img
-        src="../../public/imgs/logo2.png"
+        src="/images/logo2.png"
         alt="Logo final"
         class="mx-auto my-10"
       />
     </footer>
-
-    <style>
-      main {
-        margin: auto;
-      }
-      .lema {
-        font-family: "Poppins", sans-serif;
-        font-style: bold;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 15px;
-        letter-spacing: 0.428px;
-        text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
-        letter-spacing: 0.428px;
-      }
-      .BackgroundProducts {
-        width: 80%;
-        height: 260px;
-        /* flex-shrink: 0; */
-        border-radius: 20px;
-        background: rgba(217, 217, 217, 0.2);
-        backdrop-filter: blur(17.399999618530273px);
-      }
-      .titleLinks {
-        margin-top: 15px;
-      }
-      .txtSubtitule {
-        color: #222;
-        text-align: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: "Poppins", sans-serif;
-        font-size: 14px;
-        font-style: bold;
-        font-weight: 800;
-        line-height: 20.417px; /* 106.384% */
-        letter-spacing: 0.384px;
-      }
-      .contenido {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .btnsSlide {
-        position: relative;
-        margin-top: -60px;
-      }
-    </style>
   </main>
 </Layout>
+
+
+
+
+<style>
+  main {
+    margin: auto;
+  }
+  .lema {
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: 0.428px;
+    text-shadow: 0px 4.147px 4.147px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.428px;
+  }
+  .BackgroundProducts {
+    width: 80%;
+    height: 260px;
+    /* flex-shrink: 0; */
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    backdrop-filter: blur(17.399999618530273px);
+  }
+  .titleLinks {
+    margin-top: 15px;
+  }
+  .txtSubtitule {
+    color: #222;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: bold;
+    font-weight: 800;
+    line-height: 20.417px; /* 106.384% */
+    letter-spacing: 0.384px;
+  }
+  .contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .btnsSlide {
+    position: relative;
+    margin-top: -60px;
+  }
+</style>
