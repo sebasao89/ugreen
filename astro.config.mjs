@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   publicPath: "/public",
   site: 'https://sebasao89.github.io',
-  // base: '/ugreen',
+  base: '/ugreen',
   integrations: [tailwind()]
 });
